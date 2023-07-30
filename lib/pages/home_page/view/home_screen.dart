@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:get_it/get_it.dart';
@@ -7,6 +8,7 @@ import 'package:just_audio/just_audio.dart';
 import 'package:lottie/lottie.dart';
 import 'package:meditation_fox/constants.dart';
 import 'package:meditation_fox/generated/l10n.dart';
+import 'package:meditation_fox/helpers/display_message.dart';
 import 'package:meditation_fox/helpers/format_time.dart';
 import 'package:meditation_fox/pages/home_page/widgets/for_home_screen/all.dart';
 import 'package:meditation_fox/redux/actions.dart';
@@ -48,16 +50,7 @@ class HomePage extends StatelessWidget {
         // error (time cannot be equal to 0)
         Navigator.of(context).pop();
         store.dispatch(ClearControllersAction());
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            backgroundColor: Colors.white,
-            content: Text(
-              "Time can't be equal to zero!..",
-              style: TextStyle(color: Colors.black),
-            ),
-            duration: Duration(seconds: 1),
-          ),
-        );
+        displayMessage(context, S.of(context).time_zero_error);
       }
     }
   }
@@ -125,16 +118,14 @@ class HomePage extends StatelessWidget {
             onPanelOpened: () {
               store.dispatch(
                 OnPanelOpened(
-                  background: Colors.black38,
+                  background: black3,
                 ),
               );
             },
             onPanelClosed: () {
-              store.dispatch(
-                OnPanelOpened(background: Colors.transparent)
-              );
+              store.dispatch(OnPanelOpened(background: transparent));
             },
-            color: Colors.transparent,
+            color: transparent,
             panel: PlayerView(
               onClose: () {
                 if (pc.isAttached) {
@@ -149,11 +140,11 @@ class HomePage extends StatelessWidget {
                 }
               },
               child: Container(
-                color: Colors.transparent,
+                color: transparent,
                 child: Icon(
                   Icons.keyboard_double_arrow_up_rounded,
                   size: 35,
-                  color: Colors.white.withOpacity(0.8),
+                  color: white7,
                 ),
               ),
             ),
@@ -194,7 +185,7 @@ class HomePage extends StatelessWidget {
                               // show modal bottom sheet with time picker
                               showModalBottomSheet(
                                 context: context,
-                                backgroundColor: Colors.transparent,
+                                backgroundColor: transparent,
                                 builder: (context) {
                                   return ChangeTimeView(
                                     updateTime: updateTime,
@@ -210,7 +201,7 @@ class HomePage extends StatelessWidget {
                               style: TextStyle(
                                   fontSize: 75,
                                   fontWeight: FontWeight.w600,
-                                  color: Colors.white.withOpacity(0.9),
+                                  color: white9,
                                   letterSpacing: 0.1),
                             ),
                           ),

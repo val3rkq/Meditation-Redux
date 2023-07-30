@@ -1,7 +1,19 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'models/audio_item.dart';
 
-Color backgroundColor = const Color(0xFF373740);
+Color transparent = Colors.transparent;
+Color white7 = Colors.white.withOpacity(0.7);
+Color white9 = Colors.white.withOpacity(0.9);
+Color white = Colors.white;
+Color grey2 = Colors.grey.withOpacity(0.2);
+Color grey6 = Colors.grey.withOpacity(0.6);
+Color grey = Colors.grey;
+Color black2 = Colors.black.withOpacity(0.2);
+Color black3 = Colors.black.withOpacity(0.38);
+Color black8 = Colors.black.withOpacity(0.8);
+Color black = Colors.black;
+Color green = CupertinoColors.activeGreen;
 const String hiveBoxName = '_BOX';
 final List<AudioItem> audioAssets = [
   AudioItem(

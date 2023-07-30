@@ -35,7 +35,7 @@ void main() async {
   final Store<HomePageState> store = Store(
     reducer,
     initialState: HomePageState(
-      background: Colors.transparent,
+      background: transparent,
       playingIndex: playingIndex,
       initialTime: initialTime,
       time: initialTime,

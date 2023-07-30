@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meditation_fox/constants.dart';
 
 class MyButton extends StatelessWidget {
   const MyButton({
@@ -22,7 +23,7 @@ class MyButton extends StatelessWidget {
         padding: EdgeInsets.fromLTRB(20, 15, isPause == null ? 20 : 10, 15),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(17),
-          color: Colors.white,
+          color: white,
         ),
         child: icon == null
             ? Text(

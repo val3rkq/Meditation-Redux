@@ -30,7 +30,7 @@ class CarouselItem extends StatelessWidget {
           // blur container
           Container(
             decoration: BoxDecoration(
-              color: Colors.black.withOpacity(0.2),
+              color: black2,
               borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(25),
                 topRight: Radius.circular(25),
@@ -48,7 +48,7 @@ class CarouselItem extends StatelessWidget {
               children: [
                 Icon(
                   CupertinoIcons.music_note_2,
-                  color: Colors.white.withOpacity(0.7),
+                  color: white7,
                   size: 150,
                 ),
                 Text(
@@ -56,7 +56,7 @@ class CarouselItem extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
-                    color: Colors.white.withOpacity(0.7),
+                    color: white7,
                   ),
                 ),
               ],

@@ -5,6 +5,8 @@ import 'package:get_it/get_it.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:meditation_fox/constants.dart';
 import 'package:meditation_fox/database/db.dart';
+import 'package:meditation_fox/generated/l10n.dart';
+import 'package:meditation_fox/helpers/display_message.dart';
 import 'package:meditation_fox/pages/home_page/widgets/for_player_view/all.dart';
 import 'package:meditation_fox/pages/settings_page/view/settings_screen.dart';
 import 'package:meditation_fox/redux/actions.dart';
@@ -27,6 +29,8 @@ class PlayerView extends StatelessWidget {
     await audioPlayer.setAsset(audioAssets[index].audio);
   }
 
+  // TODO: make playlist of tracks
+
   @override
   Widget build(BuildContext context) {
     db.getData();
@@ -34,27 +38,27 @@ class PlayerView extends StatelessWidget {
       child: Container(
         margin: const EdgeInsets.only(top: 30),
         height: MediaQuery.of(context).size.height * 0.9,
-        decoration: const BoxDecoration(
-          borderRadius: BorderRadius.only(
+        decoration: BoxDecoration(
+          borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(25),
             topRight: Radius.circular(25),
           ),
-          color: Colors.transparent,
+          color: transparent,
         ),
         child: Scaffold(
-          backgroundColor: Colors.transparent,
+          backgroundColor: transparent,
           extendBodyBehindAppBar: true,
           appBar: AppBar(
-            toolbarHeight: 50,
-            backgroundColor: Colors.black.withOpacity(0),
+            toolbarHeight: 60,
+            backgroundColor: transparent,
             elevation: 0,
             scrolledUnderElevation: 0,
             leading: IconButton(
-              padding: const EdgeInsets.all(0),
+              padding: const EdgeInsets.fromLTRB(0, 25, 0, 0),
               onPressed: onClose,
-              icon: const Icon(
+              icon: Icon(
                 Icons.keyboard_arrow_down_rounded,
-                color: Colors.white,
+                color: white,
                 size: 30,
               ),
             ),
@@ -70,11 +74,11 @@ class PlayerView extends StatelessWidget {
                     ),
                   );
                 },
-                child: const Padding(
-                  padding: EdgeInsets.only(right: 15),
+                child: Padding(
+                  padding: const EdgeInsets.only(right: 15, top: 25),
                   child: Icon(
                     Icons.settings_rounded,
-                    color: Colors.white,
+                    color: white,
                     size: 26,
                   ),
                 ),
@@ -84,12 +88,13 @@ class PlayerView extends StatelessWidget {
               GestureDetector(
                 onTap: () {
                   // TODO: upload own track
+                  displayMessage(context, S.of(context).upload_is_not_available, time: 2);
                 },
-                child: const Padding(
-                  padding: EdgeInsets.only(right: 15),
+                child: Padding(
+                  padding: const EdgeInsets.only(right: 15, top: 25),
                   child: Icon(
                     Icons.upload_rounded,
-                    color: Colors.white,
+                    color: white,
                     size: 30,
                   ),
                 ),

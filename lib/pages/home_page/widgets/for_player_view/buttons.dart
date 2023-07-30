@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meditation_fox/constants.dart';
 
 class Buttons extends StatelessWidget {
   const Buttons({
@@ -20,18 +21,18 @@ class Buttons extends StatelessWidget {
         children: [
           GestureDetector(
             onTap: onPreviousTrack,
-            child: const Icon(
+            child: Icon(
               Icons.keyboard_arrow_left,
               size: 50,
-              color: Colors.white,
+              color: white,
             ),
           ),
           GestureDetector(
             onTap: onNextTrack,
-            child: const Icon(
+            child: Icon(
               Icons.keyboard_arrow_right,
               size: 50,
-              color: Colors.white,
+              color: white,
             ),
           ),
         ],

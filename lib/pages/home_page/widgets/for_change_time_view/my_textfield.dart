@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:meditation_fox/constants.dart';
 
 class MyTextField extends StatelessWidget {
   const MyTextField({
@@ -38,22 +39,22 @@ class MyTextField extends StatelessWidget {
         contentPadding: const EdgeInsets.only(left: 10),
         hintText: hintText,
         hintStyle:
-            TextStyle(color: Colors.grey.shade600, fontWeight: FontWeight.w500, fontSize: 17),
+            TextStyle(color: grey6, fontWeight: FontWeight.w500, fontSize: 17),
         counterText: '',
         filled: true,
-        fillColor: Colors.grey.withOpacity(0.2),
+        fillColor: grey2,
         enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(15),
-            borderSide: const BorderSide(color: Colors.white)),
+            borderSide: BorderSide(color: white)),
         errorBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(15),
-            borderSide: const BorderSide(color: Colors.white)),
+            borderSide: BorderSide(color: white)),
         focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(15),
-            borderSide: const BorderSide(color: Colors.white)),
+            borderSide: BorderSide(color: white)),
         focusedErrorBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(15),
-            borderSide: const BorderSide(color: Colors.white)),
+            borderSide: BorderSide(color: white)),
       ),
     );
   }

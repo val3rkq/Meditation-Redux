@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:get_it/get_it.dart';
+import 'package:meditation_fox/constants.dart';
 import 'package:meditation_fox/generated/l10n.dart';
 import 'package:meditation_fox/redux/home_page_state.dart';
 import 'package:redux/redux.dart';
@@ -29,9 +30,9 @@ class ChangeTimeView extends StatelessWidget {
         builder: (context, state) {
           return Container(
             height: MediaQuery.of(context).size.height * 0.2,
-            decoration: const BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.only(
+            decoration: BoxDecoration(
+              color: white,
+              borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(20),
                 topRight: Radius.circular(20),
               ),
@@ -43,7 +44,7 @@ class ChangeTimeView extends StatelessWidget {
               key: formKey,
               child: Scaffold(
                 resizeToAvoidBottomInset: false,
-                backgroundColor: Colors.transparent,
+                backgroundColor: transparent,
                 appBar: AppBar(
                   toolbarHeight: 30,
                   leading: const SizedBox(),
@@ -52,7 +53,7 @@ class ChangeTimeView extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 25,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black.withOpacity(0.8),
+                      color: black8,
                     ),
                   ),
                   centerTitle: true,
@@ -64,7 +65,7 @@ class ChangeTimeView extends StatelessWidget {
                       },
                       child: Icon(
                         Icons.close_rounded,
-                        color: Colors.black.withOpacity(0.8),
+                        color: black8,
                       ),
                     ),
 
@@ -78,11 +79,11 @@ class ChangeTimeView extends StatelessWidget {
                       },
                       child: Icon(
                         Icons.check_rounded,
-                        color: Colors.black.withOpacity(0.8),
+                        color: black8,
                       ),
                     ),
                   ],
-                  backgroundColor: Colors.transparent,
+                  backgroundColor: transparent,
                   elevation: 0,
                   scrolledUnderElevation: 0,
                 ),

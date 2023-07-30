@@ -166,6 +166,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Time can't be equal to zero!..`
+  String get time_zero_error {
+    return Intl.message(
+      'Time can\'t be equal to zero!..',
+      name: 'time_zero_error',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Upload is under development now`
+  String get upload_is_not_available {
+    return Intl.message(
+      'Upload is under development now',
+      name: 'upload_is_not_available',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

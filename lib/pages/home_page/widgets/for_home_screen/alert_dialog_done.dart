@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
+import 'package:meditation_fox/constants.dart';
 import 'package:meditation_fox/generated/l10n.dart';
 
 class AlertDialogDone extends StatelessWidget {
@@ -24,12 +25,12 @@ class AlertDialogDone extends StatelessWidget {
   Widget build(BuildContext context) {
     startSound();
     return AlertDialog(
-      backgroundColor: Colors.transparent,
+      backgroundColor: transparent,
       contentPadding: const EdgeInsets.all(0),
       content: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
-          color: Colors.white,
+          color: white,
         ),
         padding: const EdgeInsets.all(5),
         height: 220,
@@ -46,17 +47,17 @@ class AlertDialogDone extends StatelessWidget {
                   stopSound();
                   Navigator.of(context).pop();
                 },
-                icon: const Icon(
+                icon: Icon(
                   Icons.close_rounded,
-                  color: Colors.grey,
+                  color: grey,
                   size: 30,
                 ),
               ),
             ),
 
-            const Icon(
+            Icon(
               Icons.check_circle_outline_rounded,
-              color: CupertinoColors.activeGreen,
+              color: green,
               size: 70,
               weight: 2.2,
             ),

@@ -13,6 +13,8 @@
 
   "settings": "Settings",
 
-  "done": "Done"
+  "done": "Done",
+  "time_zero_error": "Time can't be equal to zero!..",
+  "upload_is_not_available": "Upload is under development now"
 
 }

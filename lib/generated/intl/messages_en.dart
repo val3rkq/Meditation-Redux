@@ -31,7 +31,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "seconds" : MessageLookupByLibrary.simpleMessage("Seconds.."),
     "settings" : MessageLookupByLibrary.simpleMessage("Settings"),
     "start" : MessageLookupByLibrary.simpleMessage("START"),
+    "time_zero_error" : MessageLookupByLibrary.simpleMessage("Time can\'t be equal to zero!.."),
     "too_much_minutes" : MessageLookupByLibrary.simpleMessage("Too much minutes.."),
-    "too_much_seconds" : MessageLookupByLibrary.simpleMessage("Too much seconds..")
+    "too_much_seconds" : MessageLookupByLibrary.simpleMessage("Too much seconds.."),
+    "upload_is_not_available" : MessageLookupByLibrary.simpleMessage("Upload is under development now")
   };
 }

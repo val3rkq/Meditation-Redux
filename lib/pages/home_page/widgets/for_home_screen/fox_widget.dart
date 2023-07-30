@@ -1,6 +1,7 @@
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:meditation_fox/constants.dart';
 
 class FoxWidget extends StatefulWidget {
   const FoxWidget({super.key});
@@ -19,9 +20,9 @@ class _FoxWidgetState extends State<FoxWidget> {
       child:
       // lottie animation
       Container(
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           shape: BoxShape.circle,
-          color: Colors.transparent,
+          color: transparent,
         ),
         margin: const EdgeInsets.all(25),
         padding: const EdgeInsets.only(right: 20),
