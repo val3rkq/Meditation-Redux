@@ -1,1 +1,1 @@
-# Meditation
+# Meditation App with Redux
