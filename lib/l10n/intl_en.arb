@@ -1,0 +1,18 @@
+{
+  "start": "START",
+  "pause": "PAUSE",
+  "resume": "RESUME",
+  "restart": "RESTART",
+  "change_time": "Change Time",
+
+  "seconds": "Seconds..",
+  "too_much_seconds": "Too much seconds..",
+  "minutes": "Minutes..",
+  "too_much_minutes": "Too much minutes..",
+  "hours": "Hours..",
+
+  "settings": "Settings",
+
+  "done": "Done"
+
+}
