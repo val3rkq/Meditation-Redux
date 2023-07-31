@@ -17,10 +17,6 @@ class AlertDialogDone extends StatelessWidget {
     audioPlayer2.play();
   }
 
-  void stopSound() async {
-    await audioPlayer2.stop();
-  }
-
   @override
   Widget build(BuildContext context) {
     startSound();
@@ -44,7 +40,6 @@ class AlertDialogDone extends StatelessWidget {
               alignment: Alignment.topRight,
               child: IconButton(
                 onPressed: () {
-                  stopSound();
                   Navigator.of(context).pop();
                 },
                 icon: Icon(

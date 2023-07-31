@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:get_it/get_it.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:meditation_fox/constants.dart';
 import 'package:meditation_fox/database/db.dart';
@@ -23,6 +24,8 @@ class PlayerView extends StatelessWidget {
 
   // init Database
   DB db = DB();
+  // get Hive box
+  var box = Hive.box(hiveBoxName);
 
   void setNewTrack(index) async {
     store.dispatch(ChangeTrackAction(index: index));
@@ -33,10 +36,10 @@ class PlayerView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (db.playingIndex != null) {
+    if (box.get('PLAYING_INDEX') != null) {
       db.getData();
     } else {
-
+      db.initData();
     }
     return SafeArea(
       child: Container(
