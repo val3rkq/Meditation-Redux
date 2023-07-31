@@ -235,7 +235,7 @@ class HomePage extends StatelessWidget {
                                         }
                                       },
                                       name: state.isPause!
-                                          ? S.of(context).restart
+                                          ? S.of(context).resume
                                           : S.of(context).pause,
                                       icon: state.isPause!
                                           ? Icons.play_arrow_rounded

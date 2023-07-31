@@ -14,7 +14,7 @@ Color black3 = Colors.black.withOpacity(0.38);
 Color black8 = Colors.black.withOpacity(0.8);
 Color black = Colors.black;
 Color green = CupertinoColors.activeGreen;
-const String hiveBoxName = '_BOX';
+const String hiveBoxName = '__BOX';
 final List<AudioItem> audioAssets = [
   AudioItem(
     name: 'Forest',

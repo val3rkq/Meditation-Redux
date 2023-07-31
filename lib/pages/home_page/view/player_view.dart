@@ -33,7 +33,11 @@ class PlayerView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    db.getData();
+    if (db.playingIndex != null) {
+      db.getData();
+    } else {
+
+    }
     return SafeArea(
       child: Container(
         margin: const EdgeInsets.only(top: 30),
