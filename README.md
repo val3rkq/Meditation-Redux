@@ -1,5 +1,5 @@
 # Meditation App with Redux
-The Meditation using Redux Flutter App is a mindfulness application developed using the Flutter framework and powered by Redux for state management. This app provides users with a serene experience, offering various guided meditation sessions to promote relaxation and inner calm.
+The Meditation using Redux Flutter App is a mindfulness application developed using the Flutter framework and powered by Redux for state management. This app provides users with a serene experience, offering various guided meditation sessions to promote relaxation and inner calm. This app also has Hive Datebase.
 
 ## Features
 - Browse and select from a collection of meditation sessions.
