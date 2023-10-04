@@ -7,10 +7,6 @@ The Meditation using Redux Flutter App is a mindfulness application developed us
 - Customize meditation durations based on your preferences.
 - Integrated timer and soothing background sounds.
 
-## Installation
-Since this application has not yet been uploaded to google play, you can install it by downloading this ZIP-file on your phone 
-Link on Google Drive: https://drive.google.com/drive/folders/1Mgtl5AEbWfzB-Mk_uchwYRpqoeTN3OJ1?usp=drive_link
-
 ## State Management with Redux
 This app utilizes the Redux state management pattern to efficiently manage and update the application's state. The separation of state and UI components enhances the predictability and maintainability of the app's behavior.
 
